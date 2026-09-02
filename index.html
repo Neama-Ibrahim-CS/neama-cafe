@@ -1,0 +1,728 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neama Café</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Font Awesome Icons & Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,400&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <!-- Header / Navbar -->
+    <header>
+        <nav class="navbar section-content">
+            <a href="#" class="nav-logo">
+                <h2 class="logotext"><span class="cup-icon">☕</span> Neama Café</h2>
+            </a>
+            <ul class="nav-menu">
+                <button class="fas fa-times" id="menu-close-button"></button>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#about" class="nav-link">About</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#menu" class="nav-link">Menu</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#testimonials" class="nav-link">Testimonials</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#gallery" class="nav-link">Gallery</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#contact" class="nav-link">Contact</a>
+                </li>
+            </ul>
+            
+            <div class="nav-actions">
+                <!-- Wishlist Button -->
+                <button class="nav-icon-btn" onclick="openWishlistPage()" title="Wishlist">
+                    <i class="fa-solid fa-heart"></i>
+                    <span id="wishlist-counter" class="action-badge">0</span>
+                </button>
+
+                <!-- Cart Button -->
+                <button class="nav-icon-btn" onclick="openCartPage()" title="Cart">
+                    <i class="fa-solid fa-bag-shopping"></i>
+                    <span id="cart-counter" class="action-badge">0</span>
+                </button>
+
+                <button class="fas fa-bars" id="menu-open-button"></button>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero-section">
+            <div class="section-content">
+                <div class="hero-details">
+                    <h2 class="title"><span class="typing-text">Best Coffee</span><span class="cursor">|</span></h2>
+                    <h3 class="subtitle">
+                        Make your day great with our special coffee!
+                    </h3>
+                    <p class="description">Welcome to our coffee paradise, where every bean tells a story and every cup sparks joy.</p>
+                    <div class="buttons">
+                        <a href="#menu" class="button-order-now">Order Now</a>
+                        <a href="#contact" class="button-contact-us">Contact Us</a>
+                    </div>
+                </div>
+                <div class="hero-img-wrapper">
+                    <img src="images/f14d7a98-a2cb-4746-8f6c-063fe0176f6d.png" alt="Hero Mug" class="hero-img">
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section class="about-section" id="about">
+            <div class="section-content">
+                <div class="about-image-wrapper">
+                    <img src="images/nathan-dumlao-6VhPY27jdps-unsplash.jpg" alt="About" class="about-image">
+                </div>
+                <div class="about-details">
+                    <h2 class="section-title">ABOUT US</h2>
+                    <p class="text">
+                        At Neama Café, we pride ourselves on being a go-to destination for coffee lovers, pastry enthusiasts, and conversation seekers alike. We're dedicated to providing an exceptional specialty coffee experience in a cozy and inviting atmosphere.
+                    </p>
+                    <div class="social-link-list">
+                        <a href="#" class="social-link"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="#" class="social-link"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#" class="social-link"><i class="fa-brands fa-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Menu Spotlight Section -->
+        <section class="spotlight-section" id="menu">
+            <div class="menu-heading">
+                <h2 class="title">OUR MENU</h2>
+            </div>
+
+            <div class="spotlight-carousel">
+                <!-- Item 1: Hot Beverages -->
+                <div class="disk-card" data-category="Hot Beverages">
+                    <div class="disk-wrapper">
+                        <img src="https://media.istockphoto.com/id/1172715120/photo/cup-of-cappuccino-with-beautiful-latte-art-on-wooden-plate-morning-coffee-for-couple-in-love.jpg?s=1024x1024&w=is&k=20&c=XkWgge4USyrDB2bVYHjFpYbzJW5i-B_a3Ko3umL8bAE=" alt="Hot Beverages">
+                        <div class="disk-glow"></div>
+                    </div>
+                    <div class="disk-text">
+                        <h3>Hot Beverages</h3>
+                        <p>Velvety espresso & lattes</p>
+                    </div>
+                </div>
+
+                <!-- Item 2: Cold Beverages -->
+                <div class="disk-card" data-category="Cold Beverages">
+                    <div class="disk-wrapper">
+                        <img src="https://images.unsplash.com/photo-1572490122747-3968b75cc699?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Cold Beverages">
+                        <div class="disk-glow"></div>
+                    </div>
+                    <div class="disk-text">
+                        <h3>Cold Beverages</h3>
+                        <p>Slow cold brews & frappes</p>
+                    </div>
+                </div>
+
+                <!-- Item 3: Fresh Bakery -->
+                <div class="disk-card" data-category="Fresh Bakery">
+                    <div class="disk-wrapper">
+                        <img src="https://images.unsplash.com/photo-1737700089482-9fcec5d7c990?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Fresh Bakery">
+                        <div class="disk-glow"></div>
+                    </div>
+                    <div class="disk-text">
+                        <h3>Fresh Bakery</h3>
+                        <p>Flaky croissants & pastries</p>
+                    </div>
+                </div>
+
+                <!-- Item 4: Signature Sweets -->
+                <div class="disk-card" data-category="Signature Sweets">
+                    <div class="disk-wrapper">
+                        <img src="https://images.unsplash.com/photo-1614707267537-b85aaf00c4b7?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Signature Sweets">
+                        <div class="disk-glow"></div>
+                    </div>
+                    <div class="disk-text">
+                        <h3>Desserts</h3>
+                        <p>Daily baked sweet treats</p>
+                    </div>
+                </div>
+
+                <!-- Item 5: Artisan Gelato -->
+                <div class="disk-card" data-category="Artisan Gelato">
+                    <div class="disk-wrapper">
+                        <img src="https://images.unsplash.com/photo-1740596261026-83a5f4ab68c8?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Artisan Gelato">
+                        <div class="disk-glow"></div>
+                    </div>
+                    <div class="disk-text">
+                        <h3>Artisan Gelato</h3>
+                        <p>Italian gelato & affogato</p>
+                    </div>
+                </div>
+
+                <!-- Item 6: Refreshment -->
+                <div class="disk-card" data-category="Refreshment">
+                    <div class="disk-wrapper">
+                        <img src="https://plus.unsplash.com/premium_photo-1691939610599-a9a3dde8e810?q=80&w=1925&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D">
+                        <div class="disk-glow"></div>
+                    </div>
+                    <div class="disk-text">
+                        <h3>Refreshment</h3>
+                        <p>Sparkling botanical coolers</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials Section -->
+        <section class="testimonials-section" id="testimonials">
+            <div class="section-content">
+                <div class="section-heading">
+                    <span class="sub-title">What Our Guests Say</span>
+                    <h2 class="section-title">Words of Warmth</h2>
+                </div>
+
+                <div class="testimonials-grid">
+                    <!-- Review 1 -->
+                    <div class="testimonial-card">
+                        <div class="quote-icon"><i class="fa-solid fa-quote-right"></i></div>
+                        <div class="stars">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <p class="review-text">Perfection isn’t just in my code; it’s baked into every single thing we serve here. I built the empire, I taste-test the craft, and honestly? 11/10 across the board.</p>
+                        <div class="user-meta">
+                            <img src="images/Screenshot 2026-06-16 184838.jpg" alt="Sophia Miller">
+                            <div>
+                                <h4>Neama Ibrahim</h4>
+                                <span>The Boss</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Review 2 -->
+                    <div class="testimonial-card featured-review">
+                        <div class="quote-icon"><i class="fa-solid fa-quote-right"></i></div>
+                        <div class="stars">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <p class="review-text">An exquisite culinary craft. The delicate layering of their flaky croissants and the precision in their espresso extraction set Neama Café in a league of its own.</p>
+                        <div class="user-meta">
+                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=150&q=80" alt="Lucas Weber">
+                            <div>
+                                <h4>Lucas Weber</h4>
+                                <span>Food Critic</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Review 3 -->
+                    <div class="testimonial-card">
+                        <div class="quote-icon"><i class="fa-solid fa-quote-right"></i></div>
+                        <div class="stars">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <p class="review-text">"The attention to roast profiles and the friendly staff make every visit memorable. The Berry Cheesecake is pure heaven."</p>
+                        <div class="user-meta">
+                            <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=150&q=80" alt="Elena Rostova">
+                            <div>
+                                <h4>Elena Rostova</h4>
+                                <span>Daily Visitor</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+       <!-- Gallery Section -->
+        <section class="gallery-section" id="gallery">
+            <div class="section-content">
+                <div class="section-heading">
+                    <span class="sub-title">Moments & Moods</span>
+                    <h2 class="section-title">Coffee Atmosphere</h2>
+                </div>
+
+                <div class="gallery-bento-grid">
+                    <!-- Photo 1 (Wide): Luxury Espresso Bar -->
+                    <div class="gallery-item item-wide">
+                        <img src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?auto=format&fit=crop&w=800&q=85" alt="Luxury Espresso Bar">
+                        <div class="gallery-overlay">
+                            <span>Artisanal Space</span>
+                            <h4>The Espresso Bar</h4>
+                        </div>
+                    </div>
+
+                    <!-- Photo 2: Barista Latte Art -->
+                    <div class="gallery-item">
+                        <img src="https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?auto=format&fit=crop&w=600&q=85" alt="Latte Art Mastery">
+                        <div class="gallery-overlay">
+                            <span>Barista Skill</span>
+                            <h4>Velvet Pouring</h4>
+                        </div>
+                    </div>
+
+                    <!-- Photo 3 (Tall): Cozy Lounge Corner -->
+                    <div class="gallery-item item-tall">
+                        <img src="https://images.unsplash.com/photo-1521017432531-fbd92d768814?auto=format&fit=crop&w=600&q=85" alt="Cozy Cafe Corner">
+                        <div class="gallery-overlay">
+                            <span>Atmosphere</span>
+                            <h4>Cozy Lounges</h4>
+                        </div>
+                    </div>
+
+                    <!-- Photo 4: Single Origin V60 Drip -->
+                    <div class="gallery-item">
+                        <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=600&q=85" alt="Manual V60 Pour Over">
+                        <div class="gallery-overlay">
+                            <span>Precision</span>
+                            <h4>Drip Rituals</h4>
+                        </div>
+                    </div>
+
+                    <!-- Photo 5: Artisan Pastries & Croissants -->
+                    <div class="gallery-item">
+                        <img src="https://images.unsplash.com/photo-1555507036-ab1f4038808a?auto=format&fit=crop&w=600&q=85" alt="Fresh Butter Croissants">
+                        <div class="gallery-overlay">
+                            <span>Bakery</span>
+                            <h4>Golden Pastries</h4>
+                        </div>
+                    </div>
+
+                    <!-- Photo 6 (Tall): Modern Interior Architecture -->
+                    <div class="gallery-item item-tall">
+                        <img src="https://images.unsplash.com/photo-1445116572660-236099ec97a0?auto=format&fit=crop&w=600&q=85" alt="Modern Architecture">
+                        <div class="gallery-overlay">
+                            <span>Design</span>
+                            <h4>Modern Spaces</h4>
+                        </div>
+                    </div>
+
+                    <!-- Photo 7 (Wide): Roasting Craft & Beans -->
+                    <div class="gallery-item item-wide">
+                        <img src="https://images.unsplash.com/photo-1511920170033-f8396924c348?auto=format&fit=crop&w=800&q=85" alt="Artisanal Coffee Roasting">
+                        <div class="gallery-overlay">
+                            <span>Process</span>
+                            <h4>Craft Roasting</h4>
+                        </div>
+                    </div>
+
+                    <!-- Photo 8: Italian Gelato & Affogato -->
+                    <div class="gallery-item">
+                        <img src="https://images.unsplash.com/photo-1594631252845-29fc4cc8cde9?auto=format&fit=crop&w=600&q=85" alt="Affogato Al Caffe">
+                        <div class="gallery-overlay">
+                            <span>Specialty</span>
+                            <h4>Classic Affogato</h4>
+                        </div>
+                    </div>
+
+                    <!-- Photo 9: Cold Brew Citrus Bar -->
+                    <div class="gallery-item">
+                        <img src="https://images.unsplash.com/photo-1517701604599-bb29b565090c?auto=format&fit=crop&w=600&q=85" alt="Cold Brew Bar">
+                        <div class="gallery-overlay">
+                            <span>Refreshment</span>
+                            <h4>Slow Cold Brews</h4>
+                        </div>
+                    </div>
+
+                    <!-- Photo 10 (Wide): Coffee Table Experience -->
+                    <div class="gallery-item item-wide">
+                        <img src="https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?auto=format&fit=crop&w=800&q=85" alt="Coffee Table Moments">
+                        <div class="gallery-overlay">
+                            <span>Community</span>
+                            <h4>Shared Smiles</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="contact-section" id="contact">
+  <div class="ambient-glow glow-1"></div>
+  <div class="ambient-glow glow-2"></div>
+
+  <div class="contact-wrapper">
+    <!-- Showcase Hero Card -->
+    <div class="hero-card">
+      <div class="card-image-wrap">
+        <img src="https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?auto=format&fit=crop&w=1200&q=85" alt="Showcase" class="card-img">
+        <div class="image-scrim"></div>
+      </div>
+      
+      <div class="hero-content">
+        <div class="badge-tag">
+          <span class="status-dot"></span> Get In Touch
+        </div>
+        
+        <div class="hero-typography">
+          <h2 class="hero-title">Let’s craft something <em>exceptional</em> together.</h2>
+          <p class="hero-desc">Have a question, feedback, or a special order? Reach out and we’ll get back to you promptly.</p>
+        </div>
+
+        <div class="quick-contact-strip">
+          <div class="contact-pill">
+            <i class="bi bi-geo-alt"></i>
+            <div>
+              <span class="pill-label">Location</span>
+              <span class="pill-val">Giza, Egypt</span>
+            </div>
+          </div>
+          <div class="contact-pill">
+            <i class="bi bi-clock"></i>
+            <div>
+              <span class="pill-label">Working Hours</span>
+              <span class="pill-val">08:00 AM - 10:00 PM</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Minimal Modern Form Card -->
+    <div class="form-card">
+      <div class="form-header">
+        <span class="form-pretitle">Direct Message</span>
+        <h3 class="form-title">Send a Message</h3>
+      </div>
+
+      <form class="interactive-form">
+        <div class="field-grid">
+          <div class="field-item">
+            <label>Your Name</label>
+            <div class="field-control">
+              <input type="text" placeholder="John Doe" required>
+            </div>
+          </div>
+
+          <div class="field-item">
+            <label>Email Address</label>
+            <div class="field-control">
+              <input type="email" placeholder="john@example.com" required>
+            </div>
+          </div>
+        </div>
+
+        <div class="field-item">
+          <label>Subject</label>
+          <div class="field-control">
+            <input type="text" placeholder="General Inquiry / Special Order" required>
+          </div>
+        </div>
+
+        <div class="field-item">
+          <label>Your Message</label>
+          <div class="field-control textarea-wrap">
+            <textarea rows="4" placeholder="Tell us about your inquiry..." required></textarea>
+          </div>
+        </div>
+
+        <button type="submit" class="submit-action-btn">
+          <span>Send Inquiry</span>
+          <i class="bi bi-arrow-up-right"></i>
+        </button>
+      </form>
+    </div>
+  </div>
+</section>
+    <!-- Luxury Minimal Footer -->
+    <footer class="site-footer">
+        <div class="section-content">
+            <div class="footer-grid">
+                <!-- Brand Column -->
+                <div class="footer-col brand-col">
+                    <a href="#" class="nav-logo">
+                        <h2 class="logotext"><span class="cup-icon">☕</span> Neama Café</h2>
+                    </a>
+                    <p class="footer-desc">A premium specialty coffee experience crafted with love. Bringing artisanal brews, fresh pastries, and cozy moments to your day.</p>
+                    <div class="footer-socials">
+                        <a href="#" class="social-circle" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#" class="social-circle" title="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#" class="social-circle" title="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div class="footer-col">
+                    <h4>Explore</h4>
+                    <ul class="footer-links">
+                        <li><a href="#about">About Our Story</a></li>
+                        <li><a href="#menu">Signature Taste Wheel</a></li>
+                        <li><a href="#gallery">Atmosphere Gallery</a></li>
+                        <li><a href="#testimonials">Guest Reviews</a></li>
+                    </ul>
+                </div>
+
+                <!-- Experience & Menu -->
+                <div class="footer-col">
+                    <h4>Menu Specialties</h4>
+                    <ul class="footer-links">
+                        <li><a href="#menu">Specialty Hot Brews</a></li>
+                        <li><a href="#menu">Iced Frappes & Coolers</a></li>
+                        <li><a href="#menu">French Butter Pastries</a></li>
+                        <li><a href="#menu">Artisan Italian Gelato</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 <strong>Neama Café</strong>. All rights reserved.</p>
+                <div class="footer-bottom-links">
+                    <a href="#">Privacy Policy</a>
+                    <span>•</span>
+                    <a href="#">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Toast Notification -->
+    <div id="toast-notify" class="toast-card">
+        <i class="fa-solid fa-circle-check"></i>
+        <div>
+            <strong id="toast-title">Message Delivered!</strong>
+            <p id="toast-body">We will contact you shortly on your Egyptian mobile.</p>
+        </div>
+    </div>
+
+    <!-- Category Products Modal -->
+    <div id="category-modal" class="custom-modal">
+        <div class="modal-overlay" onclick="closeCategoryModal()"></div>
+        <div class="modal-wrapper category-wrapper">
+            <div class="modal-header">
+                <h2 id="modal-category-title">Hot Beverages</h2>
+                <button class="close-btn" onclick="closeCategoryModal()"><i class="fa-solid fa-xmark"></i></button>
+            </div>
+            <div class="products-grid" id="products-grid-container">
+                <!-- Items via JS -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Fullscreen Cart Hub -->
+    <div id="full-cart-page" class="fullscreen-view">
+        <div class="view-header">
+            <div class="header-left">
+                <button class="back-circle-btn" onclick="closeCartPage()">
+                    <i class="fa-solid fa-arrow-left"></i>
+                </button>
+                <div>
+                    <h2>Your Coffee Bag & Order Summary</h2>
+                    <p class="order-meta-info">
+                        <span id="live-order-id">Order #COF-8492</span> • 
+                        <span id="live-order-time">Just now</span>
+                    </p>
+                </div>
+            </div>
+            <div class="order-status-pill">
+                <span class="pulse-dot"></span> Ready to Brew
+            </div>
+        </div>
+
+        <div class="fullscreen-content-grid">
+            <div class="order-items-column">
+                <div class="items-card-wrapper" id="cart-full-items-container">
+                    <!-- Items via JS -->
+                </div>
+            </div>
+
+            <div class="order-summary-column">
+                <div class="digital-ticket">
+                    <div class="ticket-top">
+                        <h3>Order Receipt</h3>
+                        <i class="fa-solid fa-receipt"></i>
+                    </div>
+                    
+                    <div class="ticket-meta">
+                        <div class="meta-row"><span>Date:</span> <strong id="ticket-date">--</strong></div>
+                        <div class="meta-row"><span>Time:</span> <strong id="ticket-time">--</strong></div>
+                        <div class="meta-row"><span>Unique Items:</span> <strong id="ticket-unique-count">0 Types</strong></div>
+                    </div>
+
+                    <div class="ticket-divider"></div>
+
+                    <div class="ticket-calculations">
+                        <div class="calc-row"><span>Subtotal</span> <span id="cart-subtotal">$0.00</span></div>
+                        <div class="calc-row"><span>Tax & Service (5%)</span> <span id="cart-tax">$0.00</span></div>
+                        <div class="calc-row total"><span>Total Amount</span> <span id="cart-final-total">$0.00</span></div>
+                    </div>
+
+                    <button class="confirm-order-btn" onclick="completeCheckout()">
+                        <span>Confirm & Send to Barista</span>
+                        <i class="fa-solid fa-mug-hot"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Fullscreen Wishlist Hub -->
+    <div id="full-wishlist-page" class="fullscreen-view">
+        <div class="view-header">
+            <div class="header-left">
+                <button class="back-circle-btn" onclick="closeWishlistPage()">
+                    <i class="fa-solid fa-arrow-left"></i>
+                </button>
+                <div>
+                    <h2>Your Saved Favorites</h2>
+                    <p>Curated blends you're planning to savor</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="fullscreen-content-grid single-col">
+            <div class="items-card-wrapper wishlist-grid" id="wishlist-full-items-container">
+                <!-- Wishlist Items via JS -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Checkout Modal -->
+    <div id="checkout-modal" class="custom-modal">
+        <div class="modal-overlay" onclick="closeCheckoutModal()"></div>
+        <div class="modal-wrapper checkout-wrapper">
+            <div class="modal-header">
+                <div>
+                    <h2>Complete Your Experience</h2>
+                    <p class="modal-subtitle">Confirm payment method & table reservation details</p>
+                </div>
+                <button class="close-btn" onclick="closeCheckoutModal()"><i class="fa-solid fa-xmark"></i></button>
+            </div>
+
+            <form id="final-checkout-form" onsubmit="handleOrderSubmission(event)">
+                <div class="checkout-grid">
+                    <!-- Left: Order Summary Mini-Receipt -->
+                    <div class="checkout-receipt-card">
+                        <h3>Order Items</h3>
+                        <div id="checkout-items-list" class="checkout-items-scroll"></div>
+                        
+                        <div class="checkout-totals-box">
+                            <div class="calc-row"><span>Date & Time</span> <strong id="modal-order-timestamp">--</strong></div>
+                            <div class="calc-row"><span>Subtotal</span> <span id="modal-subtotal">$0.00</span></div>
+                            <div class="calc-row"><span>Tax & Service (5%)</span> <span id="modal-tax">$0.00</span></div>
+                            <div class="calc-row total"><span>Total Payable</span> <span id="modal-final-total">$0.00</span></div>
+                        </div>
+                    </div>
+
+                    <!-- Right: Options & Details -->
+                    <div class="checkout-options-card">
+                        <div class="checkout-group">
+                            <label class="group-label">Service Type</label>
+                            <div class="custom-radio-grid">
+                                <label class="radio-card">
+                                    <input type="radio" name="order_type" value="dine_in" checked onchange="toggleReservationFields(true)">
+                                    <div class="radio-content">
+                                        <i class="fa-solid fa-chair"></i>
+                                        <span>Dine-In / Reserve Table</span>
+                                    </div>
+                                </label>
+                                <label class="radio-card">
+                                    <input type="radio" name="order_type" value="takeaway" onchange="toggleReservationFields(false)">
+                                    <div class="radio-content">
+                                        <i class="fa-solid fa-bag-shopping"></i>
+                                        <span>Takeaway</span>
+                                    </div>
+                                </label>
+                                <label class="radio-card">
+                                    <input type="radio" name="order_type" value="delivery" onchange="toggleReservationFields(false)">
+                                    <div class="radio-content">
+                                        <i class="fa-solid fa-truck-fast"></i>
+                                        <span>Home Delivery</span>
+                                    </div>
+                                </label>
+                            </div>
+                        </div>
+
+                        <div id="reservation-schedule-box" class="checkout-group reservation-box">
+                            <label class="group-label"><i class="fa-regular fa-calendar-check"></i> Reservation Schedule</label>
+                            <div class="schedule-inputs-row">
+                                <div class="input-field-box">
+                                    <i class="fa-regular fa-calendar-days"></i>
+                                    <input type="date" id="reserve-date" required>
+                                </div>
+                                <div class="input-field-box">
+                                    <i class="fa-regular fa-clock"></i>
+                                    <input type="time" id="reserve-time" required>
+                                </div>
+                                <div class="input-field-box">
+                                    <i class="fa-solid fa-user-group"></i>
+                                    <select id="reserve-guests">
+                                        <option value="1">1 Person</option>
+                                        <option value="2" selected>2 Persons</option>
+                                        <option value="4">4 Persons</option>
+                                        <option value="6">6+ Persons</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="checkout-group">
+                            <label class="group-label">Payment Method</label>
+                            <div class="custom-radio-grid">
+                                <label class="radio-card">
+                                    <input type="radio" name="payment_method" value="credit_card" checked>
+                                    <div class="radio-content">
+                                        <i class="fa-solid fa-credit-card"></i>
+                                        <span>Credit Card / Visa</span>
+                                    </div>
+                                </label>
+                                <label class="radio-card">
+                                    <input type="radio" name="payment_method" value="cash_in_cafe">
+                                    <div class="radio-content">
+                                        <i class="fa-solid fa-money-bill-wave"></i>
+                                        <span>Cash at Counter</span>
+                                    </div>
+                                </label>
+                                <label class="radio-card">
+                                    <input type="radio" name="payment_method" value="cash_on_delivery">
+                                    <div class="radio-content">
+                                        <i class="fa-solid fa-hand-holding-dollar"></i>
+                                        <span>Cash on Delivery</span>
+                                    </div>
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="checkout-group">
+                            <label class="group-label">Customer Information</label>
+                            <div class="customer-inputs-grid">
+                                <div class="input-field-box">
+                                    <i class="fa-regular fa-user"></i>
+                                    <input type="text" id="order-customer-name" placeholder="Full Name" required>
+                                </div>
+                                <div class="input-field-box">
+                                    <i class="fa-solid fa-mobile-screen"></i>
+                                    <input type="tel" id="order-customer-phone" placeholder="01XXXXXXXXX (11 digits)" maxlength="11" required>
+                                </div>
+                            </div>
+                        </div>
+
+                        <button type="submit" id="place-order-btn" class="modern-submit-btn">
+                            <span class="btn-text">Confirm & Place Order</span>
+                            <i class="fa-solid fa-mug-hot send-icon"></i>
+                            <div class="spinner-loader"></div>
+                        </button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
