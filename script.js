@@ -115,7 +115,7 @@ function openCategory(name) {
     const title = document.getElementById("modal-category-title");
     if (title) title.innerText = name;
     renderCategoryProducts();
-    if (modal) modal.classList.add("active");
+    if (modal) modal.classList.add("active"); 
 }
 
 function closeCategoryModal() {
@@ -614,6 +614,8 @@ document.addEventListener("DOMContentLoaded", () => {
             }
         });
 
+        
+ 
         function setError(inputEl, errorId, hasError) {
             const parentBox = inputEl.closest(".input-field-box");
             const hint = document.getElementById(errorId);

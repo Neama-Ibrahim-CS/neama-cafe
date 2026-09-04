@@ -353,93 +353,99 @@
                 </div>
             </div>
         </section>
+    
+       <!-- Contact Section -->
         <section class="contact-section" id="contact">
-  <div class="ambient-glow glow-1"></div>
-  <div class="ambient-glow glow-2"></div>
+          <div class="ambient-glow glow-1"></div>
+          <div class="ambient-glow glow-2"></div>
 
-  <div class="contact-wrapper">
-    <!-- Showcase Hero Card -->
-    <div class="hero-card">
-      <div class="card-image-wrap">
-        <img src="https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?auto=format&fit=crop&w=1200&q=85" alt="Showcase" class="card-img">
-        <div class="image-scrim"></div>
-      </div>
-      
-      <div class="hero-content">
-        <div class="badge-tag">
-          <span class="status-dot"></span> Get In Touch
-        </div>
-        
-        <div class="hero-typography">
-          <h2 class="hero-title">Let’s craft something <em>exceptional</em> together.</h2>
-          <p class="hero-desc">Have a question, feedback, or a special order? Reach out and we’ll get back to you promptly.</p>
-        </div>
+          <div class="contact-wrapper">
+            <!-- Showcase Hero Card -->
+            <div class="hero-card">
+              <div class="card-image-wrap">
+                <img src="https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?auto=format&fit=crop&w=1200&q=85" alt="Showcase" class="card-img">
+                <div class="image-scrim"></div>
+              </div>
+              
+              <div class="hero-content">
+                <div class="badge-tag">
+                  <span class="status-dot"></span> Get In Touch
+                </div>
+                
+                <div class="hero-typography">
+                  <h2 class="hero-title">Let’s craft something <em>exceptional</em> together.</h2>
+                  <p class="hero-desc">Have a question, feedback, or a special order? Reach out and we’ll get back to you promptly.</p>
+                </div>
 
-        <div class="quick-contact-strip">
-          <div class="contact-pill">
-            <i class="bi bi-geo-alt"></i>
-            <div>
-              <span class="pill-label">Location</span>
-              <span class="pill-val">Giza, Egypt</span>
+                <div class="quick-contact-strip">
+                  <div class="contact-pill">
+                    <i class="fa-solid fa-location-dot"></i>
+                    <div>
+                      <span class="pill-label">Location</span>
+                      <span class="pill-val">Giza, Egypt</span>
+                    </div>
+                  </div>
+                  <div class="contact-pill">
+                    <i class="fa-regular fa-clock"></i>
+                    <div>
+                      <span class="pill-label">Working Hours</span>
+                      <span class="pill-val">08:00 AM - 10:00 PM</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Minimal Modern Form Card -->
+            <div class="form-card">
+              <div class="form-header">
+                <span class="form-pretitle">Direct Message</span>
+                <h3 class="form-title">Send a Message</h3>
+              </div>
+
+              <form class="interactive-form" id="smart-contact-form" novalidate>
+                <div class="field-grid">
+                  <div class="field-item">
+                    <label for="contact-name">Your Name</label>
+                    <div class="field-control input-field-box">
+                      <input type="text" id="contact-name" placeholder="John Doe" required>
+                    </div>
+                    <span class="err-hint" id="err-name">Name must be at least 3 characters</span>
+                  </div>
+
+                  <div class="field-item">
+                    <label for="contact-email">Email Address</label>
+                    <div class="field-control input-field-box">
+                      <input type="email" id="contact-email" placeholder="john@example.com" required>
+                    </div>
+                    <span class="err-hint" id="err-email">Please enter a valid email address</span>
+                  </div>
+                </div>
+
+                <div class="field-item">
+                  <label for="contact-phone">Phone Number</label>
+                  <div class="field-control input-field-box">
+                    <input type="tel" id="contact-phone" placeholder="01XXXXXXXXX" maxlength="11" required>
+                  </div>
+                  <span class="err-hint" id="err-phone">Enter a valid Egyptian mobile number (010, 011, 012, 015)</span>
+                </div>
+
+                <div class="field-item">
+                  <label for="contact-msg">Your Message</label>
+                  <div class="field-control input-field-box textarea-wrap">
+                    <textarea id="contact-msg" rows="4" placeholder="Tell us about your inquiry..." required></textarea>
+                  </div>
+                  <span class="err-hint" id="err-msg">Message must be at least 10 characters</span>
+                </div>
+
+                <button type="submit" id="submit-contact-btn" class="submit-action-btn">
+                  <span>Send Inquiry</span>
+                  <i class="fa-solid fa-paper-plane"></i>
+                </button>
+              </form>
             </div>
           </div>
-          <div class="contact-pill">
-            <i class="bi bi-clock"></i>
-            <div>
-              <span class="pill-label">Working Hours</span>
-              <span class="pill-val">08:00 AM - 10:00 PM</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Minimal Modern Form Card -->
-    <div class="form-card">
-      <div class="form-header">
-        <span class="form-pretitle">Direct Message</span>
-        <h3 class="form-title">Send a Message</h3>
-      </div>
-
-      <form class="interactive-form">
-        <div class="field-grid">
-          <div class="field-item">
-            <label>Your Name</label>
-            <div class="field-control">
-              <input type="text" placeholder="John Doe" required>
-            </div>
-          </div>
-
-          <div class="field-item">
-            <label>Email Address</label>
-            <div class="field-control">
-              <input type="email" placeholder="john@example.com" required>
-            </div>
-          </div>
-        </div>
-
-        <div class="field-item">
-          <label>Subject</label>
-          <div class="field-control">
-            <input type="text" placeholder="General Inquiry / Special Order" required>
-          </div>
-        </div>
-
-        <div class="field-item">
-          <label>Your Message</label>
-          <div class="field-control textarea-wrap">
-            <textarea rows="4" placeholder="Tell us about your inquiry..." required></textarea>
-          </div>
-        </div>
-
-        <button type="submit" class="submit-action-btn">
-          <span>Send Inquiry</span>
-          <i class="bi bi-arrow-up-right"></i>
-        </button>
-      </form>
-    </div>
-  </div>
-</section>
+        </section>
     <!-- Luxury Minimal Footer -->
     <footer class="site-footer">
         <div class="section-content">
